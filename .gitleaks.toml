@@ -1,0 +1,23 @@
+# Gitleaks config for repos made from this template.
+# Gitleaks (https://github.com/gitleaks/gitleaks) scans for passwords, API keys, and tokens
+# before they get committed. Run: gitleaks detect --no-git   (working folder)
+#                              gitleaks detect               (git history)
+#
+# This file only skips macOS .DS_Store files. Everything else is scanned, including
+# _private/, CLAUDE.local.md, .env files, and _backups/ (backup copies of edited files, which
+# can include copies of secrets files). Those are all gitignored, but if one is ever
+# force-added, gitleaks should still catch a secret in it.
+#
+# The pattern is anchored to a path-segment boundary: (^|/) matches both the repo-relative
+# paths of a history scan and the absolute paths of a --no-git scan.
+
+title = "project template: scan everything except .DS_Store"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "macOS folder metadata, gitignored"
+paths = [
+    '''(^|/)\.DS_Store$''',
+]

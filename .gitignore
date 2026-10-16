@@ -1,0 +1,14 @@
+# Sensitive notes that stay on your machine (see README, "About _private/")
+_private/
+
+# Personal Claude Code notes for this repo only
+CLAUDE.local.md
+
+# Secrets files (keep a committed .env.example with placeholder values if useful)
+.env
+.env.*
+!.env.example
+
+# Local noise
+.DS_Store
+_backups/

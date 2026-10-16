@@ -1,0 +1,18 @@
+---
+paths:
+  - "data/**/*.json"
+---
+
+<!--
+EXAMPLE STUB. To use: copy to .claude/rules/<topic>.md (drop the .example suffix), edit `paths:`,
+fill in, and delete this comment. The .example suffix keeps the stub from loading; delete it if unused.
+
+A rule WITHOUT `paths:` frontmatter loads EVERY session, which defeats the point.
+A rule with `paths:` loads only when Claude opens a matching file.
+Write rules that can be checked in a diff ("prices always include tax"), not vibes ("be careful").
+-->
+
+# [Topic] rules
+
+- [One checkable rule per line.]
+- [What Claude cannot work out by reading the files: decisions, constraints, traps.]
